@@ -1,0 +1,118 @@
+<title>Kafile Hesap Silme</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f6f3fb; --surface:#ffffff; --ink:#241a3a; --muted:#6b5f83;
+    --line:#e6ddf1; --brand:#6d3bd4; --brand-soft:#f0e9fc; --accent:#f6863a;
+    --shadow:0 1px 2px rgba(45,20,90,.06),0 8px 30px rgba(45,20,90,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#140e22; --surface:#1d1533; --ink:#f2edfa; --muted:#a99ac6;
+      --line:#302447; --brand:#b79bf0; --brand-soft:#241a3f; --accent:#ff9d5c;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 34px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#140e22; --surface:#1d1533; --ink:#f2edfa; --muted:#a99ac6;
+    --line:#302447; --brand:#b79bf0; --brand-soft:#241a3f; --accent:#ff9d5c;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 34px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.65}
+  .wrap{max-width:760px;margin:0 auto;padding:clamp(28px,5vw,64px) 22px 96px}
+  header.doc{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+  .badge{width:44px;height:44px;border-radius:12px;flex:none;
+    background:linear-gradient(135deg,var(--brand),var(--accent));
+    display:flex;align-items:center;justify-content:center;color:#fff;
+    font-family:Fraunces,serif;font-weight:600;font-size:22px;box-shadow:var(--shadow)}
+  .brand-name{font-family:Fraunces,serif;font-weight:600;font-size:20px}
+  .brand-sub{font-size:12.5px;color:var(--muted)}
+  h1{font-family:Fraunces,serif;font-weight:600;font-size:clamp(28px,5vw,40px);
+    line-height:1.12;margin:28px 0 6px;text-wrap:balance}
+  .updated{color:var(--muted);font-size:14px;margin:0 0 26px}
+  .lead{font-size:17px;background:var(--surface);border:1px solid var(--line);
+    border-left:3px solid var(--brand);border-radius:12px;padding:18px 20px;
+    box-shadow:var(--shadow);margin:0 0 34px}
+  h2{font-family:Fraunces,serif;font-weight:600;font-size:22px;margin:36px 0 4px;
+    display:flex;align-items:baseline;gap:10px;text-wrap:balance}
+  h2 .n{font-family:Inter,sans-serif;font-size:12px;font-weight:600;color:var(--brand);
+    background:var(--brand-soft);border-radius:6px;padding:3px 8px}
+  p{margin:10px 0}
+  a{color:var(--brand);text-underline-offset:2px}
+  ol{margin:12px 0;padding-left:22px}
+  ol li{padding:5px 0}
+  ul{margin:10px 0;padding-left:0;list-style:none}
+  ul li{position:relative;padding:6px 0 6px 26px}
+  ul li::before{content:"";position:absolute;left:4px;top:14px;width:7px;height:7px;
+    border-radius:2px;background:var(--accent)}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:18px 22px;box-shadow:var(--shadow);margin:14px 0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:600;font-size:13px}
+  .contact{margin-top:36px;background:var(--brand-soft);border:1px solid var(--line);
+    border-radius:14px;padding:20px 22px}
+  .contact a{font-weight:600}
+  hr{border:none;border-top:1px solid var(--line);margin:40px 0}
+  footer{margin-top:44px;color:var(--muted);font-size:13px;text-align:center}
+</style>
+
+<div class="wrap">
+  <header class="doc">
+    <div class="badge">K</div>
+    <div>
+      <div class="brand-name">Kafile</div>
+      <div class="brand-sub">Sınav hazırlık uygulaması</div>
+    </div>
+  </header>
+
+  <h1>Hesap ve Veri Silme</h1>
+  <p class="updated">Son güncelleme: 1 Eylül 2026</p>
+
+  <p class="lead">
+    Bu sayfa, <b>Kafile</b> uygulamasında hesabınızı ve ilişkili verilerinizi nasıl
+    kalıcı olarak sileceğinizi açıklar. Silme işlemi geri alınamaz.
+  </p>
+
+  <h2><span class="n">1</span> Uygulama içinden silme (en hızlı)</h2>
+  <div class="card">
+    <ol>
+      <li>Kafile uygulamasını aç ve hesabınla giriş yap.</li>
+      <li>Alt menüden <b>Profil</b> sekmesine git.</li>
+      <li>Sayfanın altındaki <b>“🗑️ Hesabımı kalıcı olarak sil”</b> butonuna dokun.</li>
+      <li>Çıkan onay penceresinde işlemi onayla.</li>
+    </ol>
+    <p>Onayladığın anda hesabın ve verilerin sunucudan <b>kalıcı olarak</b> silinir.</p>
+  </div>
+
+  <h2><span class="n">2</span> Uygulamaya erişemiyorsan</h2>
+  <p>Uygulamayı kaldırdıysan veya giriş yapamıyorsan, aşağıdaki e-posta adresine
+  hesabını sildirmek istediğini yazarak talepte bulunabilirsin. Talebini,
+  hesabında kullandığın <b>Google/Apple e-posta adresinden</b> göndermen, kimliğini
+  doğrulamamıza yardımcı olur. Talepler en geç <b>30 gün</b> içinde işleme alınır.</p>
+  <div class="contact">
+    <p>E-posta: <a href="mailto:gokhan_evlek@hotmail.com">gokhan_evlek@hotmail.com</a></p>
+    <p style="margin:0;color:var(--muted);font-size:14px">Konu: “Kafile hesap silme talebi”</p>
+  </div>
+
+  <h2><span class="n">3</span> Silinen ve saklanan veriler</h2>
+  <table>
+    <tr><th>Veri</th><th>Durum</th></tr>
+    <tr><td>Ad ve e-posta adresi</td><td>Kalıcı silinir</td></tr>
+    <tr><td>Profil, avatar ve tercihler</td><td>Kalıcı silinir</td></tr>
+    <tr><td>Çalışma/sınav istatistikleri, ilerleme</td><td>Kalıcı silinir</td></tr>
+    <tr><td>Oda, sıralama ve sohbet verileri</td><td>Kalıcı silinir</td></tr>
+    <tr><td>Kimlik doğrulama (Firebase Auth) kaydı</td><td>Kalıcı silinir</td></tr>
+  </table>
+  <ul>
+    <li><b>Saklama süresi:</b> Hesap silindiğinde veriler derhal kaldırılır; yedeklerden
+      tamamen temizlenmesi <b>en geç 30 gün</b> sürebilir.</li>
+    <li><b>Misafir hesapları:</b> 30 gün boyunca kullanılmazsa otomatik olarak silinir.</li>
+    <li>Yasal yükümlülük gerektirmedikçe silme sonrası hiçbir kişisel veri saklanmaz.</li>
+  </ul>
+
+  <hr>
+  <footer>© 2026 Kafile · <a href="index.html">Gizlilik Politikası</a></footer>
+</div>
